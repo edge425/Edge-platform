@@ -65,7 +65,7 @@ def trades(wallet):
 
 
 def get_wallet(trader):
-    for key in ("proxyWallet", "proxy_wallet", "wallet", "address"):
+    for key in ("user_id", "proxyWallet", "proxy_wallet", "wallet", "address"):
         value = trader.get(key)
         if isinstance(value, str) and value.startswith("0x"):
             return value
