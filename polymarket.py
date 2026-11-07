@@ -1,11 +1,15 @@
-"""EDGE public Polymarket sports leaderboard collector (Python 3.10+).
 
-Writes edge_polymarket_sample.json. No third-party dependencies.
-A successful workflow requires a successful API response; errors exit nonzero.
-Leaderboard PNL is not proof of sports-only settled-bet profitability.
+"""EDGE Polymarket trader data collector.
+
+Collects the public sports leaderboard and each trader's
+public positions and recent trades.
+
+Python 3.10+. No third-party packages required.
 """
+
 import json
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -16,42 +20,56 @@ OUTPUT = "edge_polymarket_sample.json"
 
 
 def fetch(path, **params):
-    url = BASE + path + "?" + urllib.parse.urlencode(params)
+    query = urllib.parse.urlencode(params)
+    url = BASE + path + ("?" + query if query else "")
+
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "EDGE-Research/0.2", "Accept": "application/json"},
+        headers={
+            "User-Agent": "EDGE-Research/0.3",
+            "Accept": "application/json",
+        },
     )
+
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.load(response)
 
 
-
-
-def leaderboard(limit=25, period="WEEK"):
-    """Fetch the public Polymarket sports leaderboard."""
+def leaderboard(limit=25):
     return fetch(
         "/v2/leaderboard",
         category="SPORTS",
-        timePeriod=period,
+        timePeriod="WEEK",
         orderBy="PNL",
-        limit=min(max(int(limit), 1), 50),
-        
+        limit=limit,
     )
 
 
+def positions(wallet):
+    return fetch(
+        "/positions",
+        user=wallet,
+        limit=100,
+        offset=0,
+        sizeThreshold=0,
+    )
 
 
+def trades(wallet):
+    return fetch(
+        "/trades",
+        user=wallet,
+        limit=100,
+        offset=0,
+    )
 
-def positions(wallet, limit=100):
-    return fetch("/positions", user=wallet, limit=min(int(limit), 500), offset=0)
 
-
-def activity(wallet, limit=100):
-    return fetch("/activity", user=wallet, limit=min(int(limit), 500), offset=0)
-
-
-def trades(wallet, limit=100):
-    return fetch("/trades", user=wallet, limit=min(int(limit), 500), offset=0)
+def get_wallet(trader):
+    for key in ("proxyWallet", "proxy_wallet", "wallet", "address"):
+        value = trader.get(key)
+        if isinstance(value, str) and value.startswith("0x"):
+            return value
+    return None
 
 
 def main():
@@ -59,28 +77,122 @@ def main():
         "retrieved_at": datetime.now(timezone.utc).isoformat(),
         "source": "Polymarket public Data API",
         "verified_live": False,
+        "leaderboard_period": "WEEK",
+        "leaderboard": [],
+        "leaderboard_count": 0,
+        "traders": [],
         "notes": [
-            "Leaderboard PNL may not equal independently verified sports-only realized profit.",
-            "Transactions do not equal settled bets; do not infer win rates from trade counts.",
-            "Historical activity and positions may require pagination and market matching.",
+            "Leaderboard PNL is reported by Polymarket.",
+            "Leaderboard rankings do not prove sports-only realized profit.",
+            "Trader positions can include non-sports markets.",
+            "Positions are snapshots, not necessarily new bets.",
+            "Recent trades are not a complete betting history.",
+            "Win rates require verified settled outcomes.",
         ],
     }
+
     try:
         leaders = leaderboard()
+
         if isinstance(leaders, dict):
-            print("API response keys:", list(leaders.keys()))
-            leaders = leaders.get("data", leaders.get("leaderboard", leaders.get("results")))
-    
+            leaders = (
+                leaders.get("data")
+                or leaders.get("leaderboard")
+                or leaders.get("results")
+            )
+
         if not isinstance(leaders, list):
-            raise ValueError("Leaderboard response does not contain a recognized trader list")
+            raise ValueError("Invalid leaderboard response")
+
         result["leaderboard"] = leaders
         result["leaderboard_count"] = len(leaders)
         result["verified_live"] = True
-    except (urllib.error.URLError, ValueError, TypeError) as exc:
+
+    except Exception as exc:
         result["error"] = str(exc)
+
+    if result["verified_live"]:
+        for index, trader in enumerate(result["leaderboard"], start=1):
+            if not isinstance(trader, dict):
+                continue
+
+            wallet = get_wallet(trader)
+
+            entry = {
+                "rank": index,
+                "wallet": wallet,
+                "name": (
+                    trader.get("userName")
+                    or trader.get("username")
+                    or trader.get("name")
+                    or (wallet[:10] if wallet else "Unknown trader")
+                ),
+                "leaderboard": trader,
+                "positions": [],
+                "trades": [],
+                "errors": [],
+            }
+
+            if wallet:
+                try:
+                    data = positions(wallet)
+                    if isinstance(data, list):
+                        entry["positions"] = data
+                    else:
+                        entry["errors"].append(
+                            "Unexpected positions response"
+                        )
+                except Exception as exc:
+                    entry["errors"].append(
+                        "Positions: " + str(exc)
+                    )
+
+                time.sleep(0.2)
+
+                try:
+                    data = trades(wallet)
+                    if isinstance(data, list):
+                        entry["trades"] = data
+                    else:
+                        entry["errors"].append(
+                            "Unexpected trades response"
+                        )
+                except Exception as exc:
+                    entry["errors"].append(
+                        "Trades: " + str(exc)
+                    )
+
+                time.sleep(0.2)
+            else:
+                entry["errors"].append(
+                    "No valid public wallet found"
+                )
+
+            result["traders"].append(entry)
+
+            print(
+                f"Trader {index}/{len(leaders)}: "
+                f"{entry['name']} | "
+                f"{len(entry['positions'])} positions | "
+                f"{len(entry['trades'])} trades"
+            )
+
+    result["trader_count"] = len(result["traders"])
+    result["position_count"] = sum(
+        len(t["positions"]) for t in result["traders"]
+    )
+    result["trade_count"] = sum(
+        len(t["trades"]) for t in result["traders"]
+    )
+
     with open(OUTPUT, "w", encoding="utf-8") as file:
         json.dump(result, file, indent=2, ensure_ascii=False)
-    print(json.dumps({k: v for k, v in result.items() if k != "leaderboard"}, indent=2))
+
+    print("EDGE collection finished")
+    print("Traders:", result["trader_count"])
+    print("Positions:", result["position_count"])
+    print("Trades:", result["trade_count"])
+
     if not result["verified_live"]:
         sys.exit(1)
 
