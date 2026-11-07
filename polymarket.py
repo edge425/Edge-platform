@@ -16,7 +16,7 @@ def fetch(path, **params):
 
 def leaderboard(limit=25, period='WEEK'):
     """Public leaderboard. SPORTS filter may not cover all sports-only performance."""
-    return fetch('/v1/leaderboard', category='SPORTS', timePeriod=period,
+    /v2/leaderboard, category='SPORTS', timePeriod=period,
                  orderBy='PNL', limit=min(int(limit), 50), offset=0)
 
 def positions(wallet, limit=100):
