@@ -26,13 +26,20 @@ def fetch(path, **params):
 
 
 
+
 def leaderboard(limit=25, period="WEEK"):
-    """Fetch Polymarket's sports leaderboard."""
+    """Fetch the public Polymarket sports leaderboard."""
     return fetch(
+        "/v2/leaderboard",
         category="SPORTS",
-timePeriod=period,
-orderBy="PNL",
-limit=min(max(int(limit), 1), 50),
+        timePeriod=period,
+        orderBy="PNL",
+        limit=min(max(int(limit), 1), 50),
+        offset=0,
+    )
+
+
+
 
 
 def positions(wallet, limit=100):
