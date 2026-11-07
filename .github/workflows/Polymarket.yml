@@ -30,6 +30,7 @@ jobs:
           path: edge_polymarket_sample.json
           retention-days: 1
           
+      
       - name: Publish live EDGE data
         run: |
           git config user.name "github-actions[bot]"
@@ -37,6 +38,8 @@ jobs:
           git add edge_polymarket_sample.json
           if ! git diff --cached --quiet; then
             git commit -m "Update live EDGE trader data"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
+
 
