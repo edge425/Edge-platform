@@ -45,22 +45,25 @@ def leaderboard(limit=25):
     )
 
 
+
 def positions(wallet):
-    return fetch(
-        "/positions",
+    response = fetch(
+        "/v2/positions",
         user=wallet,
         limit=100,
-        offset=0,
-        sizeThreshold=0,
+        status="OPEN",
     )
+    return response.get("data", [])
 
 
 def trades(wallet):
-    return fetch(
-        "/trades",
+    response = fetch(
+        "/v2/trades",
         user=wallet,
         limit=100,
-        offset=0,
+    )
+    return response.get("data", [])
+
     )
 
 
