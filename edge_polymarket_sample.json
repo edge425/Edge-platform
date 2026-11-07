@@ -1,18 +1,14 @@
 {
-  "retrieved_at": "2026-11-07T07:05:32.784735+00:00",
+  "retrieved_at": "2026-11-07T07:37:50.587736+00:00",
   "source": "Polymarket public Data API",
   "verified_live": true,
-  "notes": [
-    "Leaderboard PNL may not equal independently verified sports-only realized profit.",
-    "Transactions do not equal settled bets; do not infer win rates from trade counts.",
-    "Historical activity and positions may require pagination and market matching."
-  ],
+  "leaderboard_period": "WEEK",
   "leaderboard": [
     {
       "rank": 1,
       "user_id": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563",
-      "pnl": 2869835.656540566,
-      "volume": 33577643.68214001,
+      "pnl": 2924531.6934666308,
+      "volume": 33846275.58182101,
       "user_name": "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
       "profile_image": "",
       "x_username": "",
@@ -31,8 +27,8 @@
     {
       "rank": 3,
       "user_id": "0xfe787d2da716d60e8acff57fb87eb13cd4d10319",
-      "pnl": 1324658.957487006,
-      "volume": 42033164.81133802,
+      "pnl": 1319218.2466701814,
+      "volume": 42092689.93262801,
       "user_name": "ferrariChampions2026",
       "profile_image": "",
       "x_username": "",
@@ -40,20 +36,20 @@
     },
     {
       "rank": 4,
-      "user_id": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
-      "pnl": 1240030.0484289583,
-      "volume": 15687738.302583009,
-      "user_name": "HomeRunHazard",
+      "user_id": "0x821dab0565ebf5b327f51db06223fdcfe01acf16",
+      "pnl": 1228621.2562497873,
+      "volume": 72237657.50246264,
+      "user_name": "Flaznorp",
       "profile_image": "",
       "x_username": "",
       "verified": false
     },
     {
       "rank": 5,
-      "user_id": "0x821dab0565ebf5b327f51db06223fdcfe01acf16",
-      "pnl": 1221239.1827443969,
-      "volume": 71967920.34087464,
-      "user_name": "Flaznorp",
+      "user_id": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+      "pnl": 1223426.6836830117,
+      "volume": 15700014.20616301,
+      "user_name": "HomeRunHazard",
       "profile_image": "",
       "x_username": "",
       "verified": false
@@ -61,7 +57,7 @@
     {
       "rank": 6,
       "user_id": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e",
-      "pnl": 1139163.3639738555,
+      "pnl": 1138758.336568856,
       "volume": 5935152.007855,
       "user_name": "robloxgamblemaster-2008-10-18",
       "profile_image": "",
@@ -71,8 +67,8 @@
     {
       "rank": 7,
       "user_id": "0x684baa57c338c2549aec0aa3f034f695d72a8409",
-      "pnl": 1123203.0032554793,
-      "volume": 4661248.872335997,
+      "pnl": 1127066.0621780506,
+      "volume": 4665711.694508995,
       "user_name": "monkeymashingkeyboard",
       "profile_image": "",
       "x_username": "",
@@ -91,8 +87,8 @@
     {
       "rank": 9,
       "user_id": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea",
-      "pnl": 961411.560626042,
-      "volume": 32931473.398202006,
+      "pnl": 961014.989468946,
+      "volume": 33116625.145328004,
       "user_name": "RN1",
       "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-1567750-84001aec-310a-470f-9584-67dfcaa61267.png",
       "x_username": "RN1polymarket",
@@ -101,8 +97,8 @@
     {
       "rank": 10,
       "user_id": "0x958bdb8aa30b8e5bd1fe4ee071f309c84e97f826",
-      "pnl": 757180.5980492895,
-      "volume": 30988498.100279987,
+      "pnl": 835553.9929411565,
+      "volume": 31130628.702183984,
       "user_name": "Multicoloured-Serf",
       "profile_image": "",
       "x_username": "",
@@ -111,7 +107,7 @@
     {
       "rank": 11,
       "user_id": "0x2a69660046d7acc4ab204d7cc5ba78b0776cd2f7",
-      "pnl": 675571.4951054761,
+      "pnl": 675600.9525554762,
       "volume": 22095231.380314004,
       "user_name": "UpTheBlues",
       "profile_image": "",
@@ -120,18 +116,28 @@
     },
     {
       "rank": 12,
-      "user_id": "0xfea31bc088000ff909be1dfd8d0e3f2c7ef2d227",
-      "pnl": 652030.5866943526,
-      "volume": 869025.2595110001,
-      "user_name": "ndb1",
+      "user_id": "0xd9e0aaca471f489be338fd0f91a26e8669a805f2",
+      "pnl": 671307.505211173,
+      "volume": 5782592.417974997,
+      "user_name": "0xD9E0AACa471f48F91A26E8669A805f2",
       "profile_image": "",
       "x_username": "",
       "verified": false
     },
     {
       "rank": 13,
+      "user_id": "0xfea31bc088000ff909be1dfd8d0e3f2c7ef2d227",
+      "pnl": 652325.8969291978,
+      "volume": 930249.2595109999,
+      "user_name": "ndb1",
+      "profile_image": "",
+      "x_username": "",
+      "verified": false
+    },
+    {
+      "rank": 14,
       "user_id": "0xf0318c32136c2db7fec88b84869aee6a1106c80c",
-      "pnl": 624684.4429215426,
+      "pnl": 625028.7588110506,
       "volume": 20094536.538954,
       "user_name": "BreakTheBank",
       "profile_image": "",
@@ -139,9 +145,9 @@
       "verified": false
     },
     {
-      "rank": 14,
+      "rank": 15,
       "user_id": "0xe5b70fd855af9258d9463992e4f1ed7987905ee3",
-      "pnl": 578028.4771315355,
+      "pnl": 577803.1196912939,
       "volume": 2820320.0735230003,
       "user_name": "EdZachary",
       "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-3799716-c886fd85-304d-43b1-a5fc-f43b2e1609ba.png",
@@ -149,7 +155,7 @@
       "verified": false
     },
     {
-      "rank": 15,
+      "rank": 16,
       "user_id": "0x9b89ef1f344d3e17b37ccdff3bccf62d04f04244",
       "pnl": 502350.1746940002,
       "volume": 6062767.539233,
@@ -159,29 +165,9 @@
       "verified": false
     },
     {
-      "rank": 16,
-      "user_id": "0xd9e0aaca471f489be338fd0f91a26e8669a805f2",
-      "pnl": 428359.2584908355,
-      "volume": 5757323.299937997,
-      "user_name": "0xD9E0AACa471f48F91A26E8669A805f2",
-      "profile_image": "",
-      "x_username": "",
-      "verified": false
-    },
-    {
       "rank": 17,
-      "user_id": "0xf28e42d20e4826f2b10a24bc952001697947cab2",
-      "pnl": 422577.81659199996,
-      "volume": 5180466.982497999,
-      "user_name": "ethanaz",
-      "profile_image": "",
-      "x_username": "",
-      "verified": false
-    },
-    {
-      "rank": 18,
       "user_id": "0xbe23032d56a012c531b372c7739bc1dbd4dfb587",
-      "pnl": 403831.660397375,
+      "pnl": 425925.672109875,
       "volume": 4605910.365394,
       "user_name": "Mastermoney",
       "profile_image": "",
@@ -189,10 +175,20 @@
       "verified": false
     },
     {
+      "rank": 18,
+      "user_id": "0xf28e42d20e4826f2b10a24bc952001697947cab2",
+      "pnl": 422577.8165920001,
+      "volume": 5180466.982497999,
+      "user_name": "ethanaz",
+      "profile_image": "",
+      "x_username": "",
+      "verified": false
+    },
+    {
       "rank": 19,
       "user_id": "0xccd81fbd3395dc43a0531f8484b21c2462daf4de",
-      "pnl": 397013.8489619307,
-      "volume": 5185851.939506,
+      "pnl": 400425.7383871189,
+      "volume": 5307769.785149,
       "user_name": "0F62",
       "profile_image": "",
       "x_username": "",
@@ -201,7 +197,7 @@
     {
       "rank": 20,
       "user_id": "0x13fa4ce1b8a27dd0b7a72db6205a50ee6ff0954c",
-      "pnl": 393931.57288971794,
+      "pnl": 393931.5729410793,
       "volume": 0.0,
       "user_name": "betterfasterstronger",
       "profile_image": "",
@@ -211,7 +207,7 @@
     {
       "rank": 21,
       "user_id": "0x21064fd320bfd5a86f8c92a94d3209edf4154dea",
-      "pnl": 373958.2720275239,
+      "pnl": 373959.120658179,
       "volume": 245385.93743699996,
       "user_name": "rainbowlilies",
       "profile_image": "",
@@ -221,8 +217,8 @@
     {
       "rank": 22,
       "user_id": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98",
-      "pnl": 341378.7953166519,
-      "volume": 14038321.463959992,
+      "pnl": 346602.37229872186,
+      "volume": 14113986.830846988,
       "user_name": "keeptheblueflagflyinghigh",
       "profile_image": "",
       "x_username": "",
@@ -231,7 +227,7 @@
     {
       "rank": 23,
       "user_id": "0xeb34b86ca3ca64eb3cee6c9a0cce668385df7268",
-      "pnl": 334480.77635005396,
+      "pnl": 334480.77646769944,
       "volume": 0.0,
       "user_name": "kneelbeforetheking",
       "profile_image": "",
@@ -240,24 +236,537 @@
     },
     {
       "rank": 24,
-      "user_id": "0xb4f978be63cdf75554b0b46a4262a6db597cc9a7",
-      "pnl": 324072.38317628205,
-      "volume": 3586324.298185,
-      "user_name": "0xb4F978BE63cDF75554b0B46a4262a6dB597cc9A7-1779258330186",
+      "user_id": "0x492442eab586f242b53bda933fd5de859c8a3782",
+      "pnl": 321142.42354,
+      "volume": 2446624.919598,
+      "user_name": "0x492442EaB586F242B53bDa933fD5dE859c8A3782-1766317541188",
       "profile_image": "",
       "x_username": "",
       "verified": false
     },
     {
       "rank": 25,
-      "user_id": "0x492442eab586f242b53bda933fd5de859c8a3782",
-      "pnl": 321281.14313,
-      "volume": 2446624.919598,
-      "user_name": "0x492442EaB586F242B53bDa933fD5dE859c8A3782-1766317541188",
+      "user_id": "0x5fdd66ffd0325d4e8d1d86fbec50caa31770a747",
+      "pnl": 319446.975416,
+      "volume": 1939664.6318350001,
+      "user_name": "juice-fruit",
       "profile_image": "",
       "x_username": "",
       "verified": false
     }
   ],
-  "leaderboard_count": 25
+  "leaderboard_count": 25,
+  "traders": [
+    {
+      "rank": 1,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 1,
+        "user_id": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563",
+        "pnl": 2924531.6934666308,
+        "volume": 33846275.58182101,
+        "user_name": "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 2,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 2,
+        "user_id": "0x85f031d069de300055900c4055c1baeb6bde3f67",
+        "pnl": 1445238.929196105,
+        "volume": 4467030.42325,
+        "user_name": "RJW1",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 3,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 3,
+        "user_id": "0xfe787d2da716d60e8acff57fb87eb13cd4d10319",
+        "pnl": 1319218.2466701814,
+        "volume": 42092689.93262801,
+        "user_name": "ferrariChampions2026",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 4,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 4,
+        "user_id": "0x821dab0565ebf5b327f51db06223fdcfe01acf16",
+        "pnl": 1228621.2562497873,
+        "volume": 72237657.50246264,
+        "user_name": "Flaznorp",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 5,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 5,
+        "user_id": "0x5268527977f700f9bf9b6d5cd843859e4e70135d",
+        "pnl": 1223426.6836830117,
+        "volume": 15700014.20616301,
+        "user_name": "HomeRunHazard",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 6,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 6,
+        "user_id": "0x6ac5bb06a9eb05641fd5e82640268b92f3ab4b6e",
+        "pnl": 1138758.336568856,
+        "volume": 5935152.007855,
+        "user_name": "robloxgamblemaster-2008-10-18",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 7,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 7,
+        "user_id": "0x684baa57c338c2549aec0aa3f034f695d72a8409",
+        "pnl": 1127066.0621780506,
+        "volume": 4665711.694508995,
+        "user_name": "monkeymashingkeyboard",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 8,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 8,
+        "user_id": "0x0f6f76ced62a911bccef92f50faaff143854d977",
+        "pnl": 1115915.0304274054,
+        "volume": 3263970.0109759998,
+        "user_name": "totoro3miyazaki",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 9,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 9,
+        "user_id": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea",
+        "pnl": 961014.989468946,
+        "volume": 33116625.145328004,
+        "user_name": "RN1",
+        "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-1567750-84001aec-310a-470f-9584-67dfcaa61267.png",
+        "x_username": "RN1polymarket",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 10,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 10,
+        "user_id": "0x958bdb8aa30b8e5bd1fe4ee071f309c84e97f826",
+        "pnl": 835553.9929411565,
+        "volume": 31130628.702183984,
+        "user_name": "Multicoloured-Serf",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 11,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 11,
+        "user_id": "0x2a69660046d7acc4ab204d7cc5ba78b0776cd2f7",
+        "pnl": 675600.9525554762,
+        "volume": 22095231.380314004,
+        "user_name": "UpTheBlues",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 12,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 12,
+        "user_id": "0xd9e0aaca471f489be338fd0f91a26e8669a805f2",
+        "pnl": 671307.505211173,
+        "volume": 5782592.417974997,
+        "user_name": "0xD9E0AACa471f48F91A26E8669A805f2",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 13,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 13,
+        "user_id": "0xfea31bc088000ff909be1dfd8d0e3f2c7ef2d227",
+        "pnl": 652325.8969291978,
+        "volume": 930249.2595109999,
+        "user_name": "ndb1",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 14,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 14,
+        "user_id": "0xf0318c32136c2db7fec88b84869aee6a1106c80c",
+        "pnl": 625028.7588110506,
+        "volume": 20094536.538954,
+        "user_name": "BreakTheBank",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 15,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 15,
+        "user_id": "0xe5b70fd855af9258d9463992e4f1ed7987905ee3",
+        "pnl": 577803.1196912939,
+        "volume": 2820320.0735230003,
+        "user_name": "EdZachary",
+        "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-3799716-c886fd85-304d-43b1-a5fc-f43b2e1609ba.png",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 16,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 16,
+        "user_id": "0x9b89ef1f344d3e17b37ccdff3bccf62d04f04244",
+        "pnl": 502350.1746940002,
+        "volume": 6062767.539233,
+        "user_name": "Woaifacai",
+        "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-8733429-5c0f8655-20cb-4548-befb-e172efcda82c.webp",
+        "x_username": "Woaifacai888",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 17,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 17,
+        "user_id": "0xbe23032d56a012c531b372c7739bc1dbd4dfb587",
+        "pnl": 425925.672109875,
+        "volume": 4605910.365394,
+        "user_name": "Mastermoney",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 18,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 18,
+        "user_id": "0xf28e42d20e4826f2b10a24bc952001697947cab2",
+        "pnl": 422577.8165920001,
+        "volume": 5180466.982497999,
+        "user_name": "ethanaz",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 19,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 19,
+        "user_id": "0xccd81fbd3395dc43a0531f8484b21c2462daf4de",
+        "pnl": 400425.7383871189,
+        "volume": 5307769.785149,
+        "user_name": "0F62",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 20,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 20,
+        "user_id": "0x13fa4ce1b8a27dd0b7a72db6205a50ee6ff0954c",
+        "pnl": 393931.5729410793,
+        "volume": 0.0,
+        "user_name": "betterfasterstronger",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 21,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 21,
+        "user_id": "0x21064fd320bfd5a86f8c92a94d3209edf4154dea",
+        "pnl": 373959.120658179,
+        "volume": 245385.93743699996,
+        "user_name": "rainbowlilies",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 22,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 22,
+        "user_id": "0x0d6a1ada6d7ff785ab4b7263d9ce8e2baa85aa98",
+        "pnl": 346602.37229872186,
+        "volume": 14113986.830846988,
+        "user_name": "keeptheblueflagflyinghigh",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 23,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 23,
+        "user_id": "0xeb34b86ca3ca64eb3cee6c9a0cce668385df7268",
+        "pnl": 334480.77646769944,
+        "volume": 0.0,
+        "user_name": "kneelbeforetheking",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 24,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 24,
+        "user_id": "0x492442eab586f242b53bda933fd5de859c8a3782",
+        "pnl": 321142.42354,
+        "volume": 2446624.919598,
+        "user_name": "0x492442EaB586F242B53bDa933fD5dE859c8A3782-1766317541188",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    },
+    {
+      "rank": 25,
+      "wallet": null,
+      "name": "Unknown trader",
+      "leaderboard": {
+        "rank": 25,
+        "user_id": "0x5fdd66ffd0325d4e8d1d86fbec50caa31770a747",
+        "pnl": 319446.975416,
+        "volume": 1939664.6318350001,
+        "user_name": "juice-fruit",
+        "profile_image": "",
+        "x_username": "",
+        "verified": false
+      },
+      "positions": [],
+      "trades": [],
+      "errors": [
+        "No valid public wallet found"
+      ]
+    }
+  ],
+  "notes": [
+    "Leaderboard PNL is reported by Polymarket.",
+    "Leaderboard rankings do not prove sports-only realized profit.",
+    "Trader positions can include non-sports markets.",
+    "Positions are snapshots, not necessarily new bets.",
+    "Recent trades are not a complete betting history.",
+    "Win rates require verified settled outcomes."
+  ],
+  "trader_count": 25,
+  "position_count": 0,
+  "trade_count": 0
 }
