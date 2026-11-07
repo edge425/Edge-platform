@@ -35,7 +35,7 @@ def leaderboard(limit=25, period="WEEK"):
         timePeriod=period,
         orderBy="PNL",
         limit=min(max(int(limit), 1), 50),
-        offset=0,
+        
     )
 
 
