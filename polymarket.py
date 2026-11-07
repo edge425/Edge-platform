@@ -67,8 +67,11 @@ def main():
     }
     try:
         leaders = leaderboard()
-        if not isinstance(leaders, list):
-            raise ValueError("Unexpected leaderboard response: expected a list")
+        if isinstance(leaders, dict):
+    print("API response keys:", list(leaders.keys()))
+    leaders = leaders.get("data", leaders.get("leaderboard", leaders.get("results")))
+if not isinstance(leaders, list):
+    raise ValueError("Leaderboard response does not contain a recognized trader list")
         result["leaderboard"] = leaders
         result["leaderboard_count"] = len(leaders)
         result["verified_live"] = True
