@@ -53,7 +53,7 @@ def positions(wallet):
         limit=100,
         status="OPEN",
     )
-        return response.get("data", [])
+  return response.get("data", [])
 
 
 def trades(wallet):
@@ -62,7 +62,7 @@ def trades(wallet):
         user=wallet,
         limit=100,
     )
-        return response.get("data", [])
+      return response.get("data", [])
 
     
 
